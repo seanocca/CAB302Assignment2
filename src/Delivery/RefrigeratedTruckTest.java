@@ -9,6 +9,11 @@ import Exceptions.DeliveryException;
 import Stock.Item;
 import Stock.Stock;
 
+/**
+ * Tests the refrigerated truck class
+ * @author Sean O'Connell
+ *
+ */
 public class RefrigeratedTruckTest {
 
 	//List for New refrigerated Items
@@ -24,7 +29,7 @@ public class RefrigeratedTruckTest {
 	/**
 	 * 
 	 * @throws Exception
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Before
 	public void setUp() throws Exception {
@@ -36,7 +41,7 @@ public class RefrigeratedTruckTest {
 	/**
 	 * 
 	 * @throws DeliveryException
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetCost() throws DeliveryException {
@@ -45,7 +50,7 @@ public class RefrigeratedTruckTest {
 	}
 	
 	/**
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetMaxCapacity() {
@@ -53,7 +58,7 @@ public class RefrigeratedTruckTest {
 	}
 	
 	/**
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void GetTruckType() {

@@ -7,6 +7,10 @@ import Exceptions.StockException;
 import Stock.Item;
 import Stock.Stock;
 
+/**
+ * The manifest is created to use for the list of trucks and the creation of it 
+ * @author Sean O'Connell
+ */
 public class Manifest {
 	
 	//Initialize manifest variables
@@ -17,7 +21,7 @@ public class Manifest {
 	 * Creates an array of Trucks both Refrigerated and Ordinary
 	 * @param cargo
 	 * @throws StockException
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public Manifest(Stock cargo) throws DeliveryException, StockException {
 		//Create stock arrays for each fridge and ordinary items
@@ -90,7 +94,7 @@ public class Manifest {
 	 * Gets the manifest as an array of Trucks 
 	 * for all the for each loops in the GUI
 	 * @return trucks
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public ArrayList<Truck> GetManifestArray(){
 		return this.trucks;
@@ -101,7 +105,7 @@ public class Manifest {
 	 *	For each truck in the manifest
 	 * @return cost
 	 * @throws DeliveryException 
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public double GetManifestCost() throws DeliveryException {
 		double cost = 0;

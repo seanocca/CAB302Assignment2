@@ -10,6 +10,11 @@ import org.junit.Test;
 import Exceptions.DeliveryException;
 import Stock.Stock;
 
+/**
+ * Used to test the class Manifest
+ * @author Sean O'Connell
+ *
+ */
 public class ManifestTest {
 
 	private Stock cargo = new Stock();
@@ -17,7 +22,7 @@ public class ManifestTest {
 	/**
 	 * Setup Manifest for testing
 	 * @throws Exception
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Before
 	public void setUp() throws Exception {
@@ -26,7 +31,7 @@ public class ManifestTest {
 
 	/**
 	 * Test the manifest creation
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testManifest() {
@@ -36,7 +41,7 @@ public class ManifestTest {
 	
 	/**
 	 * Tests the function that returns the manifest of Trucks as an Array
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetManifestArray(){
@@ -49,7 +54,7 @@ public class ManifestTest {
 	/**
 	 * Tests the function that determines the manifest cost
 	 * @throws DeliveryException
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void GetManifestCost() throws DeliveryException {

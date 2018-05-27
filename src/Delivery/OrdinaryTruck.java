@@ -3,21 +3,27 @@ package Delivery;
 import Exceptions.DeliveryException;
 import Stock.Stock;
 
+/** 
+ * Creates the ordinary truck as an abstract from the class Truck
+ * @author Sean O'Connell
+ *
+ */
 public class OrdinaryTruck extends Truck{
 
 	private int maxCapacity = 1000;
 	
 	/**
-	 * 
+	 * Generate Ordinary truck
 	 * @param cargo
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public OrdinaryTruck(Stock cargo) {
 		super(cargo);
 	}
 
-	/**
-	 * @author Sean O'Connell
+	/** 
+	 * Get Cost of the truck
+	 * 
 	 */
 	@Override
 	public double GetCost() throws DeliveryException {
@@ -29,7 +35,7 @@ public class OrdinaryTruck extends Truck{
 	}
 	
 	/**
-	 * @author Sean O'Connell
+	 * Get Max capacity of the truck
 	 */
 	@Override
 	public int GetMaxCapacity() {
@@ -37,7 +43,7 @@ public class OrdinaryTruck extends Truck{
 	}
 	
 	/**
-	 * @author Sean O'Connell
+	 * Get the truck type as a string
 	 */
 	@Override
 	public String GetTruckType() {

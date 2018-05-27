@@ -1,5 +1,9 @@
 package Exceptions;
-
+/**
+ * This is used to throw Delivery Exceptions
+ * @author Sean O'Connell
+ *
+ */
 public class DeliveryException extends Exception{
 
 	/**

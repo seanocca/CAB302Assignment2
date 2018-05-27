@@ -6,6 +6,11 @@ import java.util.Locale;
 import Exceptions.DeliveryException;
 import Exceptions.StockException;
 
+/**
+ * This instantiates the class Store as a singleton class
+ * @author Sean O'Connell
+ *
+ */
 public class Store {
 	
 	private Store current = null;
@@ -17,7 +22,7 @@ public class Store {
 	 * If it doesn't exist yet create else do nothing
 	 * @param name
 	 * @param capital
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public Store(String name, double capital) {
 		if (current == null) {
@@ -29,7 +34,7 @@ public class Store {
 	/**
 	 * Get the name of the store
 	 * @return name
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public String GetStoreName() {
 		return this.name;
@@ -38,7 +43,7 @@ public class Store {
 	/**
 	 * Get the store capital as a double
 	 * @return capital
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public double GetStoreCapital() {
 		return this.capital;
@@ -47,7 +52,7 @@ public class Store {
 	/**
 	 * Gets the capital as a string with store capital header
 	 * @return stringCapital
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public String GetCapitalString() {
 		String stringCapital = "Store Capital: $" + NumberFormat.getNumberInstance(Locale.US).format(capital);
@@ -58,7 +63,7 @@ public class Store {
 	 * Used the capital to pay for stock when the item quantity is low
 	 * @param d
 	 * @throws StockException
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public void PayWithCapital(double d) throws DeliveryException {
 		if (capital >= d) {
@@ -71,7 +76,7 @@ public class Store {
 	/**
 	 * Sell items and increase the capital
 	 * @param sell
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public void SellItemsForCapital(double sell) {
 		this.capital += sell;

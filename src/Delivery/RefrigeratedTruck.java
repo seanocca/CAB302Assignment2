@@ -4,23 +4,28 @@ import Exceptions.DeliveryException;
 import Stock.Item;
 import Stock.Stock;
 
+/** 
+ * Create the refrigerated truck class
+ * @author Sean O'Connell
+ *
+ */
 public class RefrigeratedTruck extends Truck{	
 	
 	private int maxCapacity = 800;
 	
 	/**
-	 * 
+	 * Creates the Refrigerated Truck
 	 * @param cargo
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public RefrigeratedTruck(Stock cargo) {
 		super(cargo);
 	}
 	
 	/**
+	 * Lowest safe temp of truck
+	 * @returns the safe temp of the truck
 	 * 
-	 * @return
-	 * @author Sean O'Connell
 	 */
 	 public double GetSafeTemp() {
 		double currLow = 10, newTemp;
@@ -36,7 +41,7 @@ public class RefrigeratedTruck extends Truck{
 	}
 	
 	 /**
-	  * @author Sean O'Connell
+	  * cost of truck
 	  */
 	@Override
 	public double GetCost() throws DeliveryException {
@@ -48,7 +53,7 @@ public class RefrigeratedTruck extends Truck{
 	}
 	
 	/**
-	 * @author Sean O'Connell
+	 * @returns Max capacity
 	 */
 	@Override
 	public int GetMaxCapacity() {
@@ -56,7 +61,7 @@ public class RefrigeratedTruck extends Truck{
 	}
 	
 	/**
-	 * @author Sean O'Connell
+	 * @returns truck type as string
 	 */
 	@Override
 	public String GetTruckType() {

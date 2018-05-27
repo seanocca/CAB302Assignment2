@@ -7,6 +7,11 @@ import org.junit.Test;
 
 import Stock.Stock;
 
+/**
+ * Used to test the class Truck
+ * @author Sean O'Connell
+ *
+ */
 public class TruckTest {
 	
 	private Truck truck;
@@ -16,7 +21,7 @@ public class TruckTest {
 	/**
 	 * Sets up the Truck testing class
 	 * @throws Exception
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Before
 	public void setUp() throws Exception {
@@ -26,7 +31,7 @@ public class TruckTest {
 	/**
 	 * Creates a Truck and 
 	 * checks it against the original Truck from the setUp function
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testTruck() {
@@ -36,7 +41,7 @@ public class TruckTest {
 
 	/**
 	 * Tests the current capacity of the truck
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetCurrentCapacity() {
@@ -45,7 +50,7 @@ public class TruckTest {
 
 	/**
 	 * Tests the cargo as a Stock compared
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetCargo() {

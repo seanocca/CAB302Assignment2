@@ -2,6 +2,12 @@ package Stock;
 
 import Exceptions.StockException;
 
+/**
+ * This class creates the Item object to be 
+ * used all over the application
+ * @author Sean O'Connell
+ *
+ */
 public class Item {
 	
 	public String itemName;
@@ -10,7 +16,7 @@ public class Item {
 	/**
 	 * Initialize the attributes of the created Item 
 	 * @param attributes
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public Item(String[] attributes) {
 		this.itemName = attributes[0];
@@ -34,8 +40,8 @@ public class Item {
 	
 	/**
 	 * Return the name of the Item
-	 * @return
-	 * @author Sean O'Connell
+	 * @return this item's name
+	 * 
 	 */
 	public String GetName() {
 		return this.itemName;
@@ -43,8 +49,8 @@ public class Item {
 
 	/**
 	 * Return the manufacturing cost of the Item
-	 * @return
-	 * @author Sean O'Connell
+	 * @return this item's cost
+	 * 
 	 */
 	public double GetCost() {
 		return this.itemCost;
@@ -52,19 +58,17 @@ public class Item {
 
 	/**
 	 * Return the sale price of the Item
-	 * @return
-	 * @author Sean O'Connell
+	 * @return this item's price
+	 * 
 	 */
 	public double GetPrice() {
 		return this.itemPrice;
 	}
 
 	/**
-	 * @throws StockException 
 	 * Return the reorder point of the Item
-	 * @return
-	 * @author Sean O'Connell
-	 * @throws  
+	 * @return this item's re-order point
+	 * @throws StockException
 	 */
 	public double GetReorderPoint() throws StockException {
 		if (itemOrderPoint != 0) {
@@ -75,8 +79,8 @@ public class Item {
 
 	/**
 	 * Return the reorder amount
-	 * @return
-	 * @author Sean O'Connell
+	 * @return this item's re-order amount
+	 * 
 	 */
 	public double GetReorderAmount() {
 		return this.itemOrderAmount;
@@ -84,8 +88,8 @@ public class Item {
 
 	/**
 	 * Return the temperature of the Item
-	 * @return
-	 * @author Sean O'Connell
+	 * @return this item's required temperature
+	 * 
 	 */
 	public double GetTemperature() {
 		return this.itemSafeTemp;
@@ -94,7 +98,7 @@ public class Item {
 	/**
 	 * Set the quantity of the Item in the store
 	 * @param newQuantity
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public void SetQuantity(double newQuantity) {
 		this.itemQuantity += newQuantity;
@@ -102,8 +106,8 @@ public class Item {
 	
 	/**
 	 * Return the quantity of the Item in the store
-	 * @return
-	 * @author Sean O'Connell
+	 * @return this item's quantity
+	 * 
 	 */
 	public double GetQuantity() {
 		return this.itemQuantity;
@@ -111,8 +115,8 @@ public class Item {
 	
 	/**
 	 * Return the quantity being bought
-	 * @return
-	 * @author Sean O'Connell
+	 * @return this item's buying quantity
+	 * 
 	 */
 	public double GetBuyingQuantity() {
 		return this.buyingQuantity;
@@ -121,7 +125,7 @@ public class Item {
 	/**
 	 * Set the quantity being bought
 	 * @param quantity
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public void SetBuyingQuantity(double quantity) {
 		this.buyingQuantity = quantity;

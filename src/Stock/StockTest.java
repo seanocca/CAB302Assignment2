@@ -7,6 +7,11 @@ import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * Tests the functions of the Stock class
+ * @author Sean O'Connell
+ *
+ */
 public class StockTest {
 
 	public Stock inventory;
@@ -14,7 +19,7 @@ public class StockTest {
 	/**
 	 * Setup Manifest for testing
 	 * @throws Exception
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Before
 	public void setUp() throws Exception {
@@ -23,7 +28,7 @@ public class StockTest {
 
 	/**
 	 * Test the creation of Stock
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testStock() {
@@ -32,8 +37,8 @@ public class StockTest {
 	}
 
 	/**
-	 * Tests the returned array from teh function GetStockArray()
-	 * @author Sean O'Connell
+	 * Tests the returned array from the function GetStockArray()
+	 * 
 	 */
 	@Test
 	public void testGetStockArray() {
@@ -43,7 +48,7 @@ public class StockTest {
 
 	/**
 	 * Tests the GetSize() function to find the size of the stock
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetSize() {

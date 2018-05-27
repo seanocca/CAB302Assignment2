@@ -10,6 +10,11 @@ import org.junit.Test;
 
 import Exceptions.DeliveryException;
 
+/**
+ * Tests the class Store
+ * @author Sean O'Connell
+ *
+ */
 public class StoreTest {
 
 	//Initialize Store variables
@@ -20,7 +25,7 @@ public class StoreTest {
 	/**
 	 * Setup the Store to be tested in this JUnit
 	 * @throws Exception
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Before
 	public void setUp() throws Exception {
@@ -30,7 +35,7 @@ public class StoreTest {
 	/**
 	 * Test the creation of the Store 
 	 * and if it's variables are consist
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testStore() {
@@ -40,7 +45,7 @@ public class StoreTest {
 	
 	/**
 	 * Test the function that retrieves the Store name
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetStoreName() {
@@ -49,7 +54,7 @@ public class StoreTest {
 
 	/**
 	 * Test the function that retrieves the Store capital
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetStoreCapital() {
@@ -59,7 +64,7 @@ public class StoreTest {
 	/**
 	 * Test the function that retrieves the Store capital
 	 * and that it returns as a 
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetCapitalString() {
@@ -71,7 +76,7 @@ public class StoreTest {
 	 * Test the function that negatively adjusts the capital
 	 * As if the store is paying for a shipment
 	 * @throws DeliveryException
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testPayWithCapital() throws DeliveryException {
@@ -81,7 +86,7 @@ public class StoreTest {
 	/**
 	 * Test the function that positively adjusts the store capital
 	 * As if the store has made money from the inventory
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testSellItemsForCapital() {

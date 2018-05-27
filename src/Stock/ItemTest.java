@@ -7,6 +7,11 @@ import org.junit.Test;
 
 import Exceptions.StockException;
 
+/**
+ * This class tests the class Item
+ * @author Sean O'Connell
+ *
+ */
 public class ItemTest {
 
 	private String[] values = new String[] {"rice", "2", "3", "325", "400", "10"};
@@ -16,7 +21,7 @@ public class ItemTest {
 	/**
 	 * Setup an original Item
 	 * @throws Exception
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Before
 	public void setUp() throws Exception {
@@ -25,7 +30,7 @@ public class ItemTest {
 
 	/**
 	 * Tests the creation of the Item
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testItem() {
@@ -36,7 +41,7 @@ public class ItemTest {
 	/**
 	 * Tests the function GetName() 
 	 * which returns the nameof the Item
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetName() {
@@ -46,7 +51,7 @@ public class ItemTest {
 	/**
 	 * Test the function GetCost() 
 	 * which returns the cost of the Item
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetCost() {
@@ -56,7 +61,7 @@ public class ItemTest {
 	/**
 	 * Tests the function GetPrice() 
 	 * which returns the price of the Item
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetPrice() {
@@ -66,7 +71,7 @@ public class ItemTest {
 	/**
 	 * Tests the function GetReorderPoint()
 	 * which returns the reorder point of the Item
-	 * @author Sean O'Connell
+	 * 
 	 * @throws StockException 
 	 */
 	@Test
@@ -77,7 +82,7 @@ public class ItemTest {
 	/**
 	 * Tests the function GetReorderAmount()
 	 * which returns the reorder amount of the Item
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetReorderAmount() {
@@ -87,7 +92,7 @@ public class ItemTest {
 	/** 
 	 * Tests the function GetTemperature()
 	 * which returns the temperature of the Item
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testGetTemperature() {
@@ -97,7 +102,7 @@ public class ItemTest {
 	/**
 	 * Tests the function SetQuantity()
 	 * which returns the quantity of the Item
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testSetQuantity() {
@@ -107,7 +112,7 @@ public class ItemTest {
 	/**
 	 * Test the function SetBuyingQuantity()
 	 * which returns the buying quantity of the Item
-	 * @author Sean O'Connell
+	 * 
 	 */
 	@Test
 	public void testSetBuyingQuantity() {

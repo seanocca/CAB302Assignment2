@@ -1,13 +1,17 @@
 package GUI;
 
 import javax.swing.*;
-
+/**
+ * This creates the GUI form with a main function
+ * @author Sean O'Connell
+ *
+ */
 public class MainGUI{
 		
 	/**
 	 * Create a new GUI using GUIModel Class
 	 * @param args
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public static void main(String[] args) {
 		GUIModel gui = new GUIModel();

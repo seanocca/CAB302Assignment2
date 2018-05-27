@@ -32,6 +32,11 @@ import Exceptions.StockException;
 import Stock.Item;
 import Stock.Stock;
 
+/**
+ * This initializes and creates the GUI model to become the GUI
+ * @author Sean O'Connell
+ *
+ */
 public class GUIModel extends JFrame{
 
 	/**
@@ -70,7 +75,7 @@ public class GUIModel extends JFrame{
 
 	/**
 	 * Create the form with a name
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public GUIModel() {
 		super(store.GetStoreName());
@@ -79,7 +84,7 @@ public class GUIModel extends JFrame{
 	
 	/**
 	 * Import the Items from item properties Csv
-	 * @author Sean O'Connell
+	 * 
 	 */
 	private class ImportItems implements ActionListener {
         public void actionPerformed(ActionEvent e) {
@@ -126,7 +131,7 @@ public class GUIModel extends JFrame{
 	
 	/**
 	 * Export the created Manifest to a file
-	 * @author Sean O'Connell
+	 * 
 	 */
 	private class ExportManifest implements ActionListener {
         public void actionPerformed(ActionEvent e) {
@@ -165,7 +170,7 @@ public class GUIModel extends JFrame{
 	
 	/**
 	 * Import Manifest from created manifest
-	 * @author Sean O'Connell
+	 * 
 	 */
 	private class ImportManifest implements ActionListener {
         public void actionPerformed(ActionEvent e) {
@@ -201,7 +206,7 @@ public class GUIModel extends JFrame{
 	 * @param manifest
 	 * @throws CSVFormationException
 	 * @throws DeliveryException 
-	 * @author Sean O'Connell
+	 * 
 	 */
 	private void PrintManifestToTable(Manifest manifest) throws CSVFormationException, DeliveryException {
 		String path = "./src/Files/manifest.csv";
@@ -222,7 +227,7 @@ public class GUIModel extends JFrame{
 	/**
 	 * Print Items to a JTable for the GUI
 	 * @param stockArray
-	 * @author Sean O'Connell
+	 * 
 	 */
 	private void PrintItemsToTable(Stock stockArray) throws StockException {
 		itemTableModel.setRowCount(0);
@@ -244,7 +249,7 @@ public class GUIModel extends JFrame{
 	
 	/**
 	 * Import the Sales Log and increase capital adn decrease Item quantity
-	 * @author Sean O'Connell
+	 * 
 	 */
 	private class ImportSalesLogs implements ActionListener {
         public void actionPerformed(ActionEvent e) {
@@ -293,7 +298,7 @@ public class GUIModel extends JFrame{
 	 * Check the Sales log and make positive adjustments to capital
 	 * @param saleItems
 	 * @throws StockException
-	 * @author Sean O'Connell
+	 * 
 	 */
 	private void CheckSale(Stock saleItems) throws StockException {
 		ArrayList<String> list = new ArrayList<String>();
@@ -318,7 +323,7 @@ public class GUIModel extends JFrame{
 	/**
 	 * Initialize Components on the form
 	 * only needs to be done once
-	 * @author Sean O'Connell
+	 * 
 	 */
 	private void InitComponents() {	
 		setSize(WIDTH, HEIGHT);

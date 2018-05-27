@@ -4,21 +4,27 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+/**
+ * This creates the class Stock to be used as
+ * a list of Items 
+ * @author Sean O'Connell
+ *
+ */
 public class Stock {
 	
 	private ArrayList<Item> items = new ArrayList<Item>();
 
 	/**
 	 * Initializes the class with nothing in it
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public Stock() {
 	}
 	
 	/**
 	 * Returns the Stock as a Item array
-	 * @return
-	 * @author Sean O'Connell
+	 * @return this list of items
+	 * 
 	 */
 	public ArrayList<Item> GetStockArray(){
 		return items;
@@ -26,8 +32,8 @@ public class Stock {
 	
 	/**
 	 * Returns the size of the Stock
-	 * @return
-	 * @author Sean O'Connell
+	 * @return this list size
+	 * 
 	 */
 	public int GetSize() {
 		return items.size();
@@ -36,7 +42,7 @@ public class Stock {
 	/**
 	 * Adds an Item to the Stock list
 	 * @param item
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public void add(Item item) {
 		items.add(item);
@@ -45,7 +51,7 @@ public class Stock {
 	/**
 	 * Adds all the Items from an array to the Stock
 	 * @param items
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public void addAll(ArrayList<Item> items) {
 		this.items = items;
@@ -53,7 +59,7 @@ public class Stock {
 	
 	/**
 	 * Sorts the Stock by temperature of each Item
-	 * @author Sean O'Connell
+	 * 
 	 */
 	public void sortByTemp() {
 		if (GetSize() > 0) {
@@ -69,8 +75,8 @@ public class Stock {
 	/**
 	 * Returns the number of duplicates of Item in the Stock
 	 * @param find
-	 * @return count
-	 * @author Sean O'Connell
+	 * @return count of duplicates in a list
+	 * 
 	 */
 	public int CountDuplicates(Item find){
 		//Create an array of Strings of Item names 
