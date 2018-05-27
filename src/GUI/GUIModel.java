@@ -3,6 +3,7 @@ package GUI;
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -68,7 +69,7 @@ public class GUIModel extends JFrame{
 	private Stock stockItems = new Stock();	
 
 	/**
-	 * 
+	 * Create the form with a name
 	 * @author Sean O'Connell
 	 */
 	public GUIModel() {
@@ -77,7 +78,7 @@ public class GUIModel extends JFrame{
 	}
 	
 	/**
-	 * 
+	 * Import the Items from item properties Csv
 	 * @author Sean O'Connell
 	 */
 	private class ImportItems implements ActionListener {
@@ -124,7 +125,7 @@ public class GUIModel extends JFrame{
     }
 	
 	/**
-	 * 
+	 * Export the created Manifest to a file
 	 * @author Sean O'Connell
 	 */
 	private class ExportManifest implements ActionListener {
@@ -135,7 +136,9 @@ public class GUIModel extends JFrame{
 	        		Stock newStock = new Stock();
 	        		for (Item item: stockItems.GetStockArray()) {
 	        			if (item.GetQuantity() <= item.GetReorderPoint()) {
-	        				newStock.add(item);
+	        				if (!newStock.GetStockArray().contains(item)) {
+	        					newStock.add(item);
+	        				}
 	        			}
 	        		}
 		    		manifest = new Manifest(newStock);
@@ -150,13 +153,18 @@ public class GUIModel extends JFrame{
 	    				    "CSV Formatting Error in the Manifest",
 	    				    "CSV Formation Exception",
 	    				    JOptionPane.ERROR_MESSAGE);
+				} catch (StockException e1) {
+					JOptionPane.showMessageDialog(null,
+	    				    "Items have not been Initialized",
+	    				    "Stock Exception",
+	    				    JOptionPane.ERROR_MESSAGE);
 				}            
             }
         }
     }
 	
 	/**
-	 * 
+	 * Import Manifest from created manifest
 	 * @author Sean O'Connell
 	 */
 	private class ImportManifest implements ActionListener {
@@ -189,7 +197,7 @@ public class GUIModel extends JFrame{
     }
 	
 	/**
-	 * 
+	 * Prinnt the manifest to the File with a specific value
 	 * @param manifest
 	 * @throws CSVFormationException
 	 * @throws DeliveryException 
@@ -212,7 +220,7 @@ public class GUIModel extends JFrame{
 	}
 	
 	/**
-	 * 
+	 * Print Items to a JTable for the GUI
 	 * @param stockArray
 	 * @author Sean O'Connell
 	 */
@@ -235,7 +243,7 @@ public class GUIModel extends JFrame{
 	}
 	
 	/**
-	 * 
+	 * Import the Sales Log and increase capital adn decrease Item quantity
 	 * @author Sean O'Connell
 	 */
 	private class ImportSalesLogs implements ActionListener {
@@ -282,7 +290,7 @@ public class GUIModel extends JFrame{
     }
 	
 	/**
-	 * 
+	 * Check the Sales log and make positive adjustments to capital
 	 * @param saleItems
 	 * @throws StockException
 	 * @author Sean O'Connell
@@ -308,6 +316,8 @@ public class GUIModel extends JFrame{
 	}
 	
 	/**
+	 * Initialize Components on the form
+	 * only needs to be done once
 	 * @author Sean O'Connell
 	 */
 	private void InitComponents() {	
@@ -320,6 +330,7 @@ public class GUIModel extends JFrame{
 	    //Amount of Capital within a new panel witha flow layout
 	    JPanel capitalLabel = new JPanel( new FlowLayout(FlowLayout.LEFT));
 	    storeCapital = new JLabel(store.GetCapitalString());
+	    storeCapital.setFont(new Font("Arial", Font.PLAIN, 18));
 	    capitalLabel.add(storeCapital);
 	    
 	    //Panel to add Buttons to
