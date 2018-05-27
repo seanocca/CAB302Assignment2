@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import Exceptions.StockException;
+
 public class ItemTest {
 
 	private String[] values = new String[] {"rice", "2", "3", "325", "400", "10"};
@@ -65,9 +67,10 @@ public class ItemTest {
 	 * Tests the function GetReorderPoint()
 	 * which returns the reorder point of the Item
 	 * @author Sean O'Connell
+	 * @throws StockException 
 	 */
 	@Test
-	public void testGetReorderPoint() {
+	public void testGetReorderPoint() throws StockException {
 		values[3].equals(item.GetReorderPoint());
 	}
 

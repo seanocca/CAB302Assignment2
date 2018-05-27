@@ -1,5 +1,7 @@
 package Stock;
 
+import Exceptions.StockException;
+
 public class Item {
 	
 	public String itemName;
@@ -58,12 +60,17 @@ public class Item {
 	}
 
 	/**
+	 * @throws StockException 
 	 * Return the reorder point of the Item
 	 * @return
 	 * @author Sean O'Connell
+	 * @throws  
 	 */
-	public double GetReorderPoint() {
+	public double GetReorderPoint() throws StockException {
+		if (itemOrderPoint != 0) {
 		return this.itemOrderPoint;
+		}
+		throw new StockException();
 	}
 
 	/**
