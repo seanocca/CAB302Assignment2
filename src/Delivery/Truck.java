@@ -48,7 +48,7 @@ public abstract class Truck {
 		if (cargo.GetSize() != 0) {	
 			output.add(">" + GetTruckType());
 			for(Item item: cargo.GetStockArray()) {
-				if (!output.contains(item.GetName())) {
+				if (!output.contains(item.GetName() + ", " + cargo.CountDuplicates(item))) {
 					output.add(item.GetName() + ", " + cargo.CountDuplicates(item));
 				}
 			}
