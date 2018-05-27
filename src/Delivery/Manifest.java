@@ -3,6 +3,7 @@ package Delivery;
 import java.util.ArrayList;
 
 import Exceptions.DeliveryException;
+import Exceptions.StockException;
 import Stock.Item;
 import Stock.Stock;
 
@@ -18,7 +19,7 @@ public class Manifest {
 	 * @throws StockException
 	 * @author Sean O'Connell
 	 */
-	public Manifest(Stock cargo) throws DeliveryException {
+	public Manifest(Stock cargo) throws DeliveryException, StockException {
 		//Create stock arrays for each fridge and ordinary items
 		Stock fridge = new Stock();
 		Stock ordinary = new Stock();
@@ -30,14 +31,12 @@ public class Manifest {
 		//Create an Item for every Item that needs to be ordered
 			//Eg 100 beans need to be ordered so 100 individuals items of beans are created
 		for (Item item: cargo.GetStockArray()) {
-			if (item.GetQuantity() <= item.GetReorderPoint()) {
-				for (int i = 0; i < item.GetReorderAmount(); i++) {
-					if(item.GetTemperature() <= 15) {
-						fridge.add(item);	
-						fridge.sortByTemp(); 
-					} else {
-						ordinary.add(item);	
-					}
+			for (int i = 0; i < item.GetReorderAmount(); i++) {
+				if(item.GetTemperature() <= 15) {
+					fridge.add(item);	
+					fridge.sortByTemp(); 
+				} else {
+					ordinary.add(item);	
 				}
 			}
 		}
